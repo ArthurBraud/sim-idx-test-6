@@ -23,7 +23,7 @@ contract UniswapV3FactoryListener is UniswapV3Factory$OnCreatePoolFunction {
         string memory symbol = getSymbol(inputs.tokenA);
         emit TokenMetadata(name, symbol);
 
-        // Token B metadata
+        // Token B metadata  .
         name = getName(inputs.tokenB);
         symbol = getSymbol(inputs.tokenB);
         emit TokenMetadata(name, symbol);
