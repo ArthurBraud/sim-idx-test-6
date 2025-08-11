@@ -18,10 +18,12 @@ contract UniswapV3FactoryListener is UniswapV3Factory$OnCreatePoolFunction {
         UniswapV3Factory$CreatePoolFunctionInputs memory inputs,
         UniswapV3Factory$CreatePoolFunctionOutputs memory _outputs
     ) external override {
+        // Token A metadata
         string memory name = getName(inputs.tokenA);
         string memory symbol = getSymbol(inputs.tokenA);
         emit TokenMetadata(name, symbol);
 
+        // Token B metadata
         name = getName(inputs.tokenB);
         symbol = getSymbol(inputs.tokenB);
         emit TokenMetadata(name, symbol);
